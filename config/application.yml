@@ -1,0 +1,46 @@
+spring:
+
+  # Active profile
+  profiles.active: dev
+  
+  # JSON serialization settings
+  jackson:
+    default-property-inclusion: NON_NULL
+    
+    serialization:
+      write-null-map-values: false 
+      
+    deserialization:
+      accept-single-value-as-array: true
+      
+  # https://github.com/spring-projects/spring-boot/wiki/Spring-Boot-2.1-Release-Notes#bean-overriding
+  main.allow-bean-definition-overriding: true
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://user:topsecret@localhost:8761/eureka/
+    healthcheck:
+      enabled: true
+  instance:
+    leaseRenewalIntervalInSeconds: 1
+    leaseExpirationDurationInSeconds: 2
+hystrix:
+  shareSecurityContext: true
+  command.default.execution.isolation.thread.timeoutInMilliseconds: 600000 # 10 minutes
+ribbon:
+  ConnectTimeout: 300000 # 5 minutes
+  ReadTimeout: 600000 # 10 minutes
+
+lemon:    
+   # Spring Lemon flags
+   # enabled:
+      # json-prefix: false
+      
+    

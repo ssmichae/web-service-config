@@ -1,0 +1,16 @@
+# Auth Service
+
+server:
+  port: 8081
+
+# Spring Lemon related properties
+lemon:
+
+  # First ADMIN user
+  admin:
+    username: admin@example.com
+    password: admin!
+    
+  # Properties to be passed to client
+  shared:
+    fooBar: 123...
