@@ -39,6 +39,10 @@ spring:
           group: ${spring.application.name}
           content-type: text/plain
 
+  elasticsearch:
+    rest:
+      uris: localhost:9200
+
 management:
   endpoints:
     web:
