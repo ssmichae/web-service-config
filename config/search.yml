@@ -1,0 +1,4 @@
+# Search Service
+
+server:
+  port: 8083
