@@ -1,3 +1,6 @@
-# Profile Service Development environment
+# Search Service Development environment
 
 spring:
+  elasticsearch:
+    rest:
+      uris: http://localhost:9200
