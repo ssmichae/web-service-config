@@ -1,6 +1,16 @@
 # Search Service Development environment
 
 spring:
+  application:
+    name: search-service
+  data:
+    elasticsearch:
+      cluster-name: docker-cluster
+      cluster-nodes: localhost:9300
+
   elasticsearch:
     rest:
       uris: http://localhost:9200
+
+initial-import:
+  enabled: true
