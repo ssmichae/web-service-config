@@ -30,14 +30,14 @@ spring:
           destination: user-topic
           group: ${spring.application.name}
           content-type: application/json
-        input:
-          destination: test-input
+        profile-input-channel:
+          destination: profile-topic
           group: ${spring.application.name}
-          content-type: text/plain
-        output:
-          destination: test-output
+          content-type: application/json
+        profile-output-channel:
+          destination: profile-topic
           group: ${spring.application.name}
-          content-type: text/plain
+          content-type: application/json
 
   elasticsearch:
     rest:
@@ -70,4 +70,3 @@ lemon:
    # enabled:
       # json-prefix: false
       
-    
