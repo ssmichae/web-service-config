@@ -16,6 +16,6 @@ spring:
         predicates:
         - Path=/api/profiles/**
       - id: index
-        uri: lb://search
+        uri: lb://index
         predicates:
           - Path=/api/search/**
